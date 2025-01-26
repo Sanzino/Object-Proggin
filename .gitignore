@@ -1,2 +1,16 @@
-.DS_Store
+# Ignorer .idea mapper
+**/.idea/
+
+# Ignorer out mapper
+**/out/
+
+# Ignorer .DS_Store filer
+**/.DS_Store
+
+# Ignorer .iml filer
+**/*.iml
+
+# Ignorer spesifikke Java filer og andre filer som ikke skal spores
+**/Mad-Libs.iml
+**/*.pdf
 
