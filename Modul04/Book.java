@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Book {
     private String title;
 
@@ -6,6 +8,8 @@ public class Book {
     private int numberOfPages;
 
     private Genre genre;
+
+    private ArrayList<Chapter> chapters;
 
     public int getNumberOfPages() {
         return numberOfPages;
@@ -40,8 +44,27 @@ public class Book {
         this.genre = genre;
     }
 
-    public void printMe(){
-        System.out.println(" Title:" + title + " author:" + author + " pages" + numberOfPages + " Genre:" + genre);
+
+    public ArrayList<Chapter> getChapters() {
+        return chapters;
     }
+    public void setChapters(ArrayList<Chapter> chapters) {
+        this.chapters = chapters;
+    }
+
+    public int readingTime() {
+        int sum = 0;
+        for (Chapter c : chapters){
+            sum = sum + c.getReadingTime();
+
+        }
+        return sum;
+    }
+
+    public void printMe(){
+        System.out.println("Title: " + title + "\nAuthor: " + author + "\nNumber of pages: " + numberOfPages + "\nGenre: " + genre + "\nChapters: " + chapters);
+    }
+
+
 
 }
